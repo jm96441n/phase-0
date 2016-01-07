@@ -1,4 +1,4 @@
-![index wireframe](/week-2/imgs/wireframe-index.png) ![blog wireframe](/week-2/imgs/wireframe-blog-index.png) 
+![index wireframe](/week-2/imgs/wireframe-index.jpg) ![blog wireframe](/week-2/imgs/wireframe-blog-index.png) 
 
 What is a wireframe?
 A wireframe is the basic layout of how you want your website to look. Using different shapes, you design the layout of your website.
