@@ -1,4 +1,5 @@
-![1ColorChange](/week-3/imgs/1Change_Color.png)
+
+![1ColorChange](/phase-0/week-3/imgs/1Change_Color.png)
 ![2Column](/phase-0/week-3/imgs/2Column.png)
 ![3Row](/phase-0/week-3/imgs/3Row.png)
 ![4Equidistant](/phase-0/week-3/imgs/4Equidistant.png)
