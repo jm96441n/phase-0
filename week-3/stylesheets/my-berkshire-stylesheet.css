@@ -69,3 +69,20 @@ div p img {
   text-align: center;
 
 }
+
+/*
+1) What is important to know when linking an external file (like a stylesheet) to an HTML file?
+It is important to know what type of file it is that you are linking, as well as knowing where to link the file correctly (in the head) of your HTML file.
+
+2) What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+I used floats and many div's to help with the positioning. The floats helped to keep the div's with the links separate/not overlap. Also, using smaller div's as our borders between the text segments helped a lot. It was a little more difficult than expected to get the site how I wanted it, but it seems like with more practice it will easier. It seemed like most of our problems came from not being totally familiar with the process of using CSS rather than a lack of understanding of how the elements work with each other.
+
+3) What CSS did you use to modify the element style?
+I used color, text-align, font-size, and background-color to modify the element style.
+
+4) Did you modify the HTML to include classes or id's? If so which did you choose and why? If you didn't, how yould you know which one to add to your HTML?
+I used both classes and id's in my HTML. I used the class attribute for the borders so I could adjust all of them with one CSS tag, and I used id's for the two div's containing the links so I could modify each one individually.
+
+5) When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+I think my code was a bit cleaner and followed best practices more closely, because they used many table elements to display the links, whereas I used div's which are a bit cleaner and easier to use, as well as all the formatting for the site was done using HTML as opposed to CSS.
