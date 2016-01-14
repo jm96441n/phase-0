@@ -1,13 +1,13 @@
 
-![1ColorChange](/phase-0/week-3/imgs/1Change_Color.png)
-![2Column](/phase-0/week-3/imgs/2Column.png)
-![3Row](/phase-0/week-3/imgs/3Row.png)
-![4Equidistant](/phase-0/week-3/imgs/4Equidistant.png)
-![5Squares](/phase-0/week-3/imgs/5Squares.png)
-![6Footer](/phase-0/week-3/imgs/6Footer.png)
-![7Header](/phase-0/week-3/imgs/7Header.png)
-![8Sidebar](/phase-0/week-3/imgs/8Sidebar.png)
-![9Creative](/phase-0/week-3/imgs/9Creative.png)
+![1ColorChange](/week-3/imgs/1Change_Color.png)
+![2Column](/week-3/imgs/2Column.png)
+![3Row](/week-3/imgs/3Row.png)
+![4Equidistant](/week-3/imgs/4Equidistant.png)
+![5Squares](/week-3/imgs/5Squares.png)
+![6Footer](/week-3/imgs/6Footer.png)
+![7Header](/week-3/imgs/7Header.png)
+![8Sidebar](/week-3/imgs/8Sidebar.png)
+![9Creative](/week-3/imgs/9Creative.png)
 
 1) How can you use Chrome's DevTools inspector to help you format or position elements?
 Chrome's DevTools can help you test formatting configurations and see the result right away, allowing you to see the results of your formatting in real time.
