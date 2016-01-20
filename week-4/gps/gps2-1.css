@@ -1,0 +1,40 @@
+html {
+  background-color: #F5E4EF;
+}
+
+article h2 {
+  text-decoration: underline;
+}
+
+header {
+  text-align: center;
+  display: inline;
+  font-family: serif;
+  font-weight: bold;
+ }
+ 
+header p {
+  font-family: cursive;
+}
+
+.column-1 {
+  padding-left: 2em;
+  width: 45%;
+  float: left;
+  margin-bottom: 40px;
+  font-family: san-serif;
+}
+
+.column-2 {
+  padding-right: 2em;
+  width: 45%;
+  float: right;
+  margin-bottom: 40px;
+  font-family: san-serif;
+}
+
+footer {
+  width: 100%;
+  clear: both;
+  text-align: center;
+}
