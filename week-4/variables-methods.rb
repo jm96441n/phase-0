@@ -40,7 +40,11 @@ Define-Method = https://github.com/jm96441n/phase-0/tree/master/week-4/define-me
 Address = https://github.com/jm96441n/phase-0/tree/master/week-4/address
 
 Math = https://github.com/jm96441n/phase-0/tree/master/week-4/math
+<<<<<<< HEAD
 
 =end
 
 
+=======
+end
+>>>>>>> 5407eb57b597fd38e53507ddef3dfc28a5730004
