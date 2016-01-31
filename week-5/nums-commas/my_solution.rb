@@ -38,6 +38,22 @@ DEFINE method called nums_comma which takes one argument, an integer
 		RETURN the integer given in string form
 =end
 # 1. Initial Solution
+def separate_comma(number)
+	num_str = number.to_s
+	rnum_str = num_str.reverse
+	num_comma = (num_str.length)/3
+	count = 3
+	num_comma.times do |x|
+		x = ","
+		rnum_str.insert(count,x)
+		count+=4
+		break if count = num_str.length
+	end
+	num_w_comma = rnum_str.reverse
+	return num_w_comma
+end
+
+=begin
 
 def separate_comma(number)
 	num_str = number.to_s
@@ -116,7 +132,7 @@ def separate_comma(number)
 	end
 	return num_w_comma
 end
-
+=end
 p separate_comma(68340532)
 p separate_comma(10000000)
 
