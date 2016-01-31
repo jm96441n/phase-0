@@ -91,8 +91,7 @@ end
 def my_array_sorting_method(source)
     num_arr = []
     str_arr = []
-    new_arr = source
-    new_arr.each do |x|
+    source.each do |x|
       if x.is_a? Integer
         num_arr.push(x)
       else
