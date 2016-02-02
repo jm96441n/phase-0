@@ -2,7 +2,7 @@
 
 
 # I worked on this challenge [by myself].
-# I spent [#] hours on this challenge.
+# I spent [3] hours on this challenge.
 
 # Pseudocode
 =begin
@@ -23,44 +23,63 @@ END
 class Die
   def initialize(labels)
   	@sides = labels
-  	if labels == []
-  		raise ArgumentError.new('Dice must have at labels for sides')
-  	end
+    if @sides == []
+      raise ArgumentError.new('Dice must have at labels for sides')
+    end
 	end
 
   def sides
-  	@leng = @sides.length
-    #@index = @leng - 1
-  	return @leng
+  	  @sides.length
+  	  
+  
   end
 
   def roll
-    rand_side = @sides[rand(@leng)]
+    rand_index = rand(@sides.length)
+    return @sides[rand_index]
   end
 end
 
 
 
 
-arr2 = ('A'..'Z').to_a.shuffle.first(15)
-arr = ['A']
-die = Die.new(arr2)
-p die.sides
-p die.roll
-
-
-p Array.new(1000){die.roll}.uniq.sort
-p arr2.sort
-#p Array.new(100){die.roll}
-
 # Refactored Solution
+class Die
+  def initialize(labels)
+    @sides = labels
+    if @sides == []
+      raise ArgumentError.new('Dice must have at labels for sides')
+    end
+  end
 
+  def sides
+      @sides.length
+      
+  
+  end
 
-#rand_side = @sides[rand(@length)]
-#  	return rand_side
-
-
+  def roll
+    @sides.sample
+  end
+end
 
 
 
 # Reflection
+=begin
+1) What were the main differences between this die class and the last one 
+you created in terms of implementation? Did you need to change my logic to get this to work?
+There wasn't too much of a difference, the main difference was in the how you 
+derived the random roll. In this you had to take a random number in the range of the length of the array and use that as the index to call the random side. The logic was very similar though.
+2) What does this exercise teach you about making code that is easily changeable of modifiable?
+This exercise taught me to leave my code as open to change as possible, so that it 
+can be easily applicable in other situations with minimal changes.
+3) What new methods did you learn when working on this challenge, if any?
+I used .sample, which was a new method. It returns a random element of an array.
+4) What concepts about classes were you able to solidify in this challenge?
+The concept of instance variables was definitely solidified in this challenge, and how 
+to use them appropriately. 
+
+  
+=end
+
