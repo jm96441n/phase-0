@@ -30,17 +30,18 @@ class Die
 
   def sides
   	@leng = @sides.length
+    #@index = @leng - 1
   	return @leng
   end
 
   def roll
-      rand_side = @sides[rand(@leng)]
+    rand_side = @sides[rand(@leng)]
   end
 end
 
 
 
-=begin
+
 arr2 = ('A'..'Z').to_a.shuffle.first(15)
 arr = ['A']
 die = Die.new(arr2)
@@ -51,7 +52,7 @@ p die.roll
 p Array.new(1000){die.roll}.uniq.sort
 p arr2.sort
 #p Array.new(100){die.roll}
-=end
+
 # Refactored Solution
 
 
@@ -62,4 +63,4 @@ p arr2.sort
 
 
 
-# Reflectionx
+# Reflection
