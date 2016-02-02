@@ -60,7 +60,7 @@ class Die
   end
 
   def roll
-    @sides[rand(@sides.length)]
+    @sides.sample
   end
 end
 
@@ -68,14 +68,18 @@ end
 
 # Reflection
 =begin
-1) What were the main differences between this die class and the last one you created in terms of implementation? Did you need to change my logic to get this to work?
-There wasn't too much of a difference, the main difference was in the how you derived the random roll. In this you had to take a random number in the range of the length of the array and use that as the index to call the random side. The logic was very similar though.
+1) What were the main differences between this die class and the last one 
+you created in terms of implementation? Did you need to change my logic to get this to work?
+There wasn't too much of a difference, the main difference was in the how you 
+derived the random roll. In this you had to take a random number in the range of the length of the array and use that as the index to call the random side. The logic was very similar though.
 2) What does this exercise teach you about making code that is easily changeable of modifiable?
-This exercise taught me to leave my code as open to change as possible, so that it can be easily applicable in other situations with minimal changes.
+This exercise taught me to leave my code as open to change as possible, so that it 
+can be easily applicable in other situations with minimal changes.
 3) What new methods did you learn when working on this challenge, if any?
-I did not learn or use any new methods in this challenge.
+I used .sample, which was a new method. It returns a random element of an array.
 4) What concepts about classes were you able to solidify in this challenge?
-The concept of instance variables was definitely solidified in this challenge, and how to use them appropriately. 
+The concept of instance variables was definitely solidified in this challenge, and how 
+to use them appropriately. 
 
   
 =end
