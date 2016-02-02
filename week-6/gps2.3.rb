@@ -73,7 +73,7 @@ p serving_size_calc("THIS IS AN ERROR", 5)
 
 #  Reflection
 =begin
-1) What did you learn about making code readable by working on this challenge?
+>1) What did you learn about making code readable by working on this challenge?
 I learned that adding comments to your code about what certain blocks are doing makes your code much more readable. We found a few instances where we spent some time trying to figure out exactly what the code was trying to do. Also, making sure your variable names a descriptive of what the variable does.
 2) Did you learn any new methods? What did you learn about them?
 I learned .values_at. It searches for the value at a particular key in the hash, and returns the value in an array.
