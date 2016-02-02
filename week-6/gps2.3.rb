@@ -38,47 +38,50 @@ end
 
 def serving_size_calc(item_to_make, num_of_ingredients)
   library = {"cookie" => 1, "cake" =>  5, "pie" => 7}
-    if library.has_key?(item_to_make)
-      ingredients_needed = library[item_to_make]
-      remaining_ingredients = num_of_ingredients % ingredients_needed
-      library.each do |food|
-        if item_to_make == 'pie'
-          num_pies = num_of_ingredients/7 
-          num_cakes = (num_of_ingredients-(num_pies*7))/5  
-          num_cookies = (num_of_ingredients-((num_pies*7)+(num_cakes*5)))/1
-          return  "Calculations complete: Make #{num_pies} pies, #{num_cakes} cakes, #{num_cookies} cookies"
-      
-        elsif item_to_make == 'cake'  
-          num_cakes = num_of_ingredients/5  
-          num_cookies = (num_of_ingredients-(num_cakes*5))/1
-          return "Calculations complete: Make #{num_cakes} cakes and #{num_cookies} cookies"
-      
-        else
-          return "Calculations complete: Make #{num_of_ingredients} cookies"
+
+  if library.has_key?(item_to_make)
+    ingredients_needed = library[item_to_make]
+    num_servings = num_of_ingredients/ingredients_needed
+    string = "You can make #{num_servings} #{item_to_make}s"
+    remaining_ingredients = num_of_ingredients %  ingredients_needed
+    if remaining_ingredients != 0
+      new_library = library.sort_by{|k, v| -v}
+      new_library.each do |food, number|
+        if remaining_ingredients/number > 0
+          string += ", #{(remaining_ingredients/number)} #{food}s"
+          remaining_ingredients -= number
         end
       end
-    else
-      raise ArgumentError.new("#{item_to_make} is not a valid input")
     end
+  return string  
+  else
+    raise ArgumentError.new("This is an error")
+  end
 end
 
-p serving_size_calc("pie", 9)
+p serving_size_calc("pie", 13)
 p serving_size_calc("pie", 8)
 p serving_size_calc("cake", 5)
 p serving_size_calc("cake", 7)
 p serving_size_calc("cookie", 1)
 p serving_size_calc("cookie", 10)
 p serving_size_calc("THIS IS AN ERROR", 5)
-
+  
 
 #  Reflection
 =begin
 1) What did you learn about making code readable by working on this challenge?
->I learned that adding comments to your code about what certain blocks are doing makes your code much more readable. We found a few instances where we spent some time trying to figure out exactly what the code was trying to do. Also, making sure your variable names a descriptive of what the variable does.
+I learned that adding comments to your code about what certain blocks are 
+doing makes your code much more readable. We found a few instances where 
+we spent some time trying to figure out exactly what the code was trying 
+to do. Also, making sure your variable names a descriptive of what the variable does.
 2) Did you learn any new methods? What did you learn about them?
-I learned .values_at. It searches for the value at a particular key in the hash, and returns the value in an array.
+I learned .values_at. It searches for the value at a particular key in 
+the hash, and returns the value in an array.
 3) What did you learn about accessing data in hashes?
-I learned that when you access data in a hash, you have to be mindful of what data structure the information is returned as. For example, the 'values_at' method returns your information as an array.
+I learned that when you access data in a hash, you have to be mindful of what data 
+structure the information is returned as. For example, the 'values_at' method 
+returns your information as an array.
 4) What concepts were solidified when working through this challenge?
 The concept of iterating through a hash and how to raise argument errors.
 
