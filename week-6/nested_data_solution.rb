@@ -86,10 +86,15 @@ startup_names[1][2].each{|item|p item}
 #Reflection
 =begin
 1) What are some general rules you can apply to nested arrays?
-Some general rules you can apply to nested arrays, is to make sure you keep count of how many arrays a nested array is within. This will help you with calling objects that belong to that array.
+Some general rules you can apply to nested arrays, is to make sure you keep count of how many arrays a 
+nested array is within. This will help you with calling objects that belong to that array.
 2) What are some ways you can iterate over nested arrays?
-One way is to use .each_index and then test to see if an element of the largest array is an Array, and then use another .each_index to iterate over that nested array. Another way is to use .each and go to specific index the nested arrays are located at and iterate over that array.
-3) Did you find any good new methods to implement or did you re-use one you were already familiar with? What was it and why did you decide that was a good option?
-A new method we implemented was the .kind_of method which helped us to distinguish between items in an array and the nested array's that were present in the array.
+One way is to use .each_index and then test to see if an element of the largest array is an Array, 
+and then use another .each_index to iterate over that nested array. Another way is to use .each and go to 
+specific index the nested arrays are located at and iterate over that array.
+3) Did you find any good new methods to implement or did you re-use one you were already familiar with? 
+What was it and why did you decide that was a good option?
+A new method we implemented was the .kind_of method which helped us to distinguish between items in 
+an array and the nested array's that were present in the array.
 
 =end
