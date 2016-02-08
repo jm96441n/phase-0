@@ -12,8 +12,11 @@ DEFINE method, intialize which takes one argument, an integer
 DEFINE method, which takes an argument which is the cc number
   RETURN as an array with numbers separated
 DEFINE method, which takes an array as an argument
-  ITERATE through the array, and if the index is     divisible by two or if the index is zero,       than double the number
-    IF the number is two digits long then we         split the number into it's respective digits and push it to the array with doubled numbers
+  ITERATE through the array, and if the index is     
+  divisible by two or if the index is zero,       
+  than double the number
+    IF the number is two digits long then we        
+   split the number into it's respective digits and push it to the array with doubled numbers
   SUM all the digits in the array
  IF the sum of the digits in the array is divisble by 10, then return true
  ELSE return false
@@ -33,8 +36,11 @@ DEFINE method, intialize which takes one argument, an integer
 DEFINE method, which takes an argument which is the cc number
   RETURN as an array with numbers separated
 DEFINE method, which takes an array as an argument
-  ITERATE through the array, and if the index is     divisible by two or if the index is zero,       than double the number
-    IF the number is two digits long then we         split the number into it's respective digits and push it to the array with doubled numbers
+  ITERATE through the array, and if the index is     
+  divisible by two or if the index is zero,       
+  than double the number
+    IF the number is two digits long then we         
+    split the number into it's respective digits and push it to the array with doubled numbers
   SUM all the digits in the array
  IF the sum of the digits in the array is divisble by 10, then return true
  ELSE return false
@@ -164,8 +170,10 @@ p example.check_card(4563 9601 2200 1999)
 
 # Reflection
 =begin 
-1) What was the most difficult part of this challenge for you and your pair?
-The most difficult part of this challenge was splitting the integer (credit card number) into it's respective digits.
+1) What was the most difficult part of this challenge for you 
+and your pair?
+The most difficult part of this challenge was splitting the integer 
+(credit card number) into it's respective digits.
 2) What new methods did you find to help you when you refactored?
 We found .flatten, which turned an array of arrays into a single array.
 3) What concepts or learnings were you able to solidify in this challenge?
