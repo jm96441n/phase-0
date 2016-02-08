@@ -77,4 +77,4 @@ I decided to store the groups in a hash. At first I had the groups stored in an 
 5) What did you learn in the process of refactoring your inital solution? Did you learn any new methods?
 I didn't end up doing much refactoring for this exercise. I did a lot of research while writing this code for the best methods to use. I learned about .each_slice which sliced an array at a set interval.
 	
-end
+=end
