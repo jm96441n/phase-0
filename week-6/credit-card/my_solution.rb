@@ -163,3 +163,14 @@ p example.check_card(4563 9601 2200 1999)
 
 
 # Reflection
+=begin 
+1) What was the most difficult part of this challenge for you and your pair?
+The most difficult part of this challenge was splitting the integer (credit card number) into it's respective digits.
+2) What new methods did you find to help you when you refactored?
+We found .flatten, which turned an array of arrays into a single array.
+3) What concepts or learnings were you able to solidify in this challenge?
+I was able to solidify the concepts of manipulating arrays.
+
+
+
+=end
