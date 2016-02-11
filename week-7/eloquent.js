@@ -28,3 +28,13 @@ function min(number1, number2) {
   else
     return number2;
 }
+
+var me = {};
+function storeInfo(key, value){
+  me[key] = value;
+}
+storeInfo(name, 'John');
+storeInfo(age, 27);
+storeInfo(food1, 'Pizza');
+storeInfo(food2, 'Sushi');
+storeInfo(food3, 'Bacon');
