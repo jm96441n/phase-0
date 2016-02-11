@@ -1,4 +1,4 @@
-//Person 1: User Stories
+//Person 1: User Stories [John Maguire]
 //1) As a user I want to make sure that sum is a defined function.
 //2) As a user I want to check to make sure that the sum of the oddLengthArray is 27.
 //3) As a user I want to check that the sum of the evenLengthArray is 43
