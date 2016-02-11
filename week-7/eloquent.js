@@ -5,16 +5,36 @@ console.log(number);
 prompt("What is your favorite food?");
 console.log("Hey! That's my favorite too!");
 
-for (var number = 1; number <=100; number++){
+for (var number = 1; number < 100; number += 1)
+{
   var print = ""
-  if (number % 3 == 0)
-    print += "Fizz";
-  if (number % 5 == 0)
-    print += 'Buzz';
-  console.log (print || number);
+  if (number % 3 ==0 && number % 5 == 0)
+    print = "FizzBuzz";
+  else if (number % 3 == 0)
+    print = "Fizz";
+  else if (number % 5 == 0)
+    print = "Buzz";
+  else
+    print = number;
+  console.log(print);
 }
 
 for (var pound = '#'; pound.length <=8; pound += '#')
 	console.log(pound);
 
-	
+function min(number1, number2) {
+  if (number1 < number2)
+    return number1;
+  else
+    return number2;
+}
+
+var me = {};
+function storeInfo(key, value){
+  me[key] = value;
+}
+storeInfo(name, 'John');
+storeInfo(age, 27);
+storeInfo(food1, 'Pizza');
+storeInfo(food2, 'Sushi');
+storeInfo(food3, 'Bacon');
