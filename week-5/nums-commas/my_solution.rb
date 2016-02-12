@@ -47,7 +47,7 @@ def separate_comma(number)
 		x = ","
 		rnum_str.insert(count,x)
 		count+=4
-		break if count = num_str.length
+		break if count == num_str.length+1
 	end
 	num_w_comma = rnum_str.reverse
 	return num_w_comma
