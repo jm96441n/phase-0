@@ -1,6 +1,6 @@
  // JavaScript Olympics
 
-// I paired [with: Megan Swann] on this challenge.
+// I paired [with: Megan Swanby] on this challenge.
 
 // This challenge took me [1] hours.
 
