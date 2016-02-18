@@ -1,4 +1,4 @@
-![schema photo](/schema.png)
+![schema photo](/week-8/database-intro/schema.png)
 
 1) What are databases for?
 Databases are for storing information. They normally store the information in 
