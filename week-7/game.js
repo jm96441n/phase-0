@@ -25,139 +25,139 @@
 //  if user chooses no print 'next time try opening a box'
 // print what weapons you have and how much elixir you have
 // Initial Code
-var weapons = ['sword','mace','spear','lance','war hammer','trident'];
-var elixirStorage = 0
-var weaponStorage = []
-var valueBox = [1,2,3,4,5,6,7,8,9,10]
+// var weapons = ['sword','mace','spear','lance','war hammer','trident'];
+// var elixirStorage = 0
+// var weaponStorage = []
+// var valueBox = [1,2,3,4,5,6,7,8,9,10]
 
 
-function prompts(question, callback) {
-    var stdin = process.stdin,
-        stdout = process.stdout;
+// function prompts(question, callback) {
+//     var stdin = process.stdin,
+//         stdout = process.stdout;
 
-    stdin.resume();
-    stdout.write(question);
+//     stdin.resume();
+//     stdout.write(question);
 
-    stdin.once('data', function (data) {
-        callback(data.toString().trim());
-    });
-}
+//     stdin.once('data', function (data) {
+//         callback(data.toString().trim());
+//     });
+// }
 
-prompts('Hello explorer, as you move through this cave you goal is to collect 15 vials of elixir and at least 3 weapons. Along your travels you will see random boxes, and these could contain an object that you need. When you encounter them you can choose to open them or leave them. I would advise opening all the boxes you find. To control your character type "Right", "Left", or "Straight". When you are ready to begin input your direction of choice ', function(answer) {
-		if (answer === "Right"){
-			explorer.goRight();
-		}
-		else if (answer === "Left"){
-			explorer.goLeft();
-		}
-		else if (answer === "Straight"){
-			explorer.goStraight();
-		}
-		else {
-			console.log('That is not a valid input');
-			gameloop.choice();
-		};
-});
+// prompts('Hello explorer, as you move through this cave you goal is to collect 15 vials of elixir and at least 3 weapons. Along your travels you will see random boxes, and these could contain an object that you need. When you encounter them you can choose to open them or leave them. I would advise opening all the boxes you find. To control your character type "Right", "Left", or "Straight". When you are ready to begin input your direction of choice ', function(answer) {
+// 		if (answer === "Right"){
+// 			explorer.goRight();
+// 		}
+// 		else if (answer === "Left"){
+// 			explorer.goLeft();
+// 		}
+// 		else if (answer === "Straight"){
+// 			explorer.goStraight();
+// 		}
+// 		else {
+// 			console.log('That is not a valid input');
+// 			gameloop.choice();
+// 		};
+// });
 
-var gameloop =  {
-	choice: function() { 
-		if ((weaponStorage.length <= 3) && (elixirStorage <= 15)){
-			prompts('Now choose the direction you wish to head next ("R", "L", or "S"): ', function(input) {
-				if (input === "R"){
-					explorer.goRight();
-				}
-				else if (input === "L"){
-					explorer.goLeft();
-				}
-				else if (input === "S"){
-					explorer.goStraight();
-				}
-				else {
-					console.log('That is not a valid input');
-					gameloop.choice();
-				};
-			});
-		}
-		else {
-			console.log("You have completed the game. Good work explorer!")
-		};
-  }
-};
+// var gameloop =  {
+// 	choice: function() { 
+// 		if ((weaponStorage.length <= 3) && (elixirStorage <= 15)){
+// 			prompts('Now choose the direction you wish to head next ("R", "L", or "S"): ', function(input) {
+// 				if (input === "R"){
+// 					explorer.goRight();
+// 				}
+// 				else if (input === "L"){
+// 					explorer.goLeft();
+// 				}
+// 				else if (input === "S"){
+// 					explorer.goStraight();
+// 				}
+// 				else {
+// 					console.log('That is not a valid input');
+// 					gameloop.choice();
+// 				};
+// 			});
+// 		}
+// 		else {
+// 			console.log("You have completed the game. Good work explorer!")
+// 		};
+//   }
+// };
 	
 
 
-var containerBox = {
-	openBox: function() {
-		var randomWeapon = weapons[Math.floor(Math.random()*weapons.length)];
-		var randBoxNum = valueBox[Math.floor(Math.random()*weapons.length)]
-		if (randBoxNum === 2 || randBoxNum === 5 || randBoxNum === 8){
-			elixirStorage += 3;
-			console.log("You found 3 vials of elixir");
-			console.log('Weapons = '+ weaponStorage);
-			console.log('Elixir = ' + elixirStorage);
-		}
+// var containerBox = {
+// 	openBox: function() {
+// 		var randomWeapon = weapons[Math.floor(Math.random()*weapons.length)];
+// 		var randBoxNum = valueBox[Math.floor(Math.random()*weapons.length)]
+// 		if (randBoxNum === 2 || randBoxNum === 5 || randBoxNum === 8){
+// 			elixirStorage += 3;
+// 			console.log("You found 3 vials of elixir");
+// 			console.log('Weapons = '+ weaponStorage);
+// 			console.log('Elixir = ' + elixirStorage);
+// 		}
 		
-		else if (randBoxNum === 1 || randBoxNum === 4 || randBoxNum ===7){
-				console.log("You found a " + randomWeapon + "it will be added to your weapons storage.");
-				weaponStorage.push(randomWeapon);
-				console.log('Weapons = '+ weaponStorage);
-				console.log('Elixir = ' + elixirStorage);
-		}
-		else {
-			console.log("This box was empty");
-			console.log('Weapons = ' + weaponStorage);
-			console.log('Elixir = ' + elixirStorage);
-		};
-		gameloop.choice();
-	},
-	// closeBox: function() {
-	// 	console.log('You chose not to open the box. I would not reccomend this in the future.');
-	// }
-};
+// 		else if (randBoxNum === 1 || randBoxNum === 4 || randBoxNum ===7){
+// 				console.log("You found a " + randomWeapon + "it will be added to your weapons storage.");
+// 				weaponStorage.push(randomWeapon);
+// 				console.log('Weapons = '+ weaponStorage);
+// 				console.log('Elixir = ' + elixirStorage);
+// 		}
+// 		else {
+// 			console.log("This box was empty");
+// 			console.log('Weapons = ' + weaponStorage);
+// 			console.log('Elixir = ' + elixirStorage);
+// 		};
+// 		gameloop.choice();
+// 	},
+// 	// closeBox: function() {
+// 	// 	console.log('You chose not to open the box. I would not reccomend this in the future.');
+// 	// }
+// };
 
-var explorer = {
-	goRight: function (){
-		var randChoice = (Math.floor(Math.random()*1)+1);
-		if (randChoice === 1)
-		{ console.log("You found a box, time to open and see what is inside!")
-			containerBox.openBox();
-		}
-		else {
-			console.log('Weapons = ' + weaponStorage);
-			console.log('Elixir = ' + elixirStorage);
-			console.log("Nothing here, make another movement.");
-			gameloop.choice();
-		};
-	},
-	goLeft: function () 
-	{
-		var randChoice = (Math.floor(Math.random()*1)+1);
-		if (randChoice === 1)
-		{ console.log("You found a box, time to open and see what is inside!")
-			containerBox.openBox();
-		}
-		else {
-			console.log('Weapons = ' + weaponStorage);
-			console.log('Elixir = ' + elixirStorage);
-			console.log("Nothing here, make another movement.");
-			gameloop.choice();
-		};
-	},
+// var explorer = {
+// 	goRight: function (){
+// 		var randChoice = (Math.floor(Math.random()*1)+1);
+// 		if (randChoice === 1)
+// 		{ console.log("You found a box, time to open and see what is inside!")
+// 			containerBox.openBox();
+// 		}
+// 		else {
+// 			console.log('Weapons = ' + weaponStorage);
+// 			console.log('Elixir = ' + elixirStorage);
+// 			console.log("Nothing here, make another movement.");
+// 			gameloop.choice();
+// 		};
+// 	},
+// 	goLeft: function () 
+// 	{
+// 		var randChoice = (Math.floor(Math.random()*1)+1);
+// 		if (randChoice === 1)
+// 		{ console.log("You found a box, time to open and see what is inside!")
+// 			containerBox.openBox();
+// 		}
+// 		else {
+// 			console.log('Weapons = ' + weaponStorage);
+// 			console.log('Elixir = ' + elixirStorage);
+// 			console.log("Nothing here, make another movement.");
+// 			gameloop.choice();
+// 		};
+// 	},
 
-	goStraight: function (){
-		var randChoice = (Math.floor(Math.random()*1)+1);
-		if (randChoice === 1)
-		{ console.log("You found a box, time to open and see what is inside!")
-			containerBox.openBox();
-		}
-		else {
-			console.log('Weapons = ' + weaponStorage);
-			console.log('Elixir = ' + elixirStorage);
-			console.log("Nothing here, make another movement.");
-			gameloop.choice();
-		};
-	},
-};
+// 	goStraight: function (){
+// 		var randChoice = (Math.floor(Math.random()*1)+1);
+// 		if (randChoice === 1)
+// 		{ console.log("You found a box, time to open and see what is inside!")
+// 			containerBox.openBox();
+// 		}
+// 		else {
+// 			console.log('Weapons = ' + weaponStorage);
+// 			console.log('Elixir = ' + elixirStorage);
+// 			console.log("Nothing here, make another movement.");
+// 			gameloop.choice();
+// 		};
+// 	},
+// };
 
 
 // 
@@ -189,7 +189,7 @@ prompts('Hello explorer, as you move through this cave you goal is to collect 15
 
 var gameloop =  {
 	choice: function() { 
-		if ((weaponStorage.length <= 3) && (elixirStorage <= 15)){
+		if ((weaponStorage.length <= 3 && elixirStorage <= 15)){
 			prompts('Now choose the direction you wish to head next ("R", "L", or "S"): ', function(input) {
 				if (input === "R" || input === "L" || input === "S"){
 					explorer.goDirection();
