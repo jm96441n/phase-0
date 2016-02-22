@@ -228,9 +228,8 @@ for (var names in votes) {
 
 
 for (var position in voteCount){
-  var count = 0
   for (var voteCounter in voteCount[position]){
-    
+    winner = Math.max(voteCount[position][voteCounter])
     if (count < voteCount[position][voteCounter]){
       count = voteCount[position][voteCounter];
       officers[position] = voteCounter
@@ -242,12 +241,20 @@ for (var position in voteCount){
 
 // __________________________________________
 // Reflection
+/*
+1) What did you learn about iterating over nested objects in JavaScript?
+I learned that iterating over nested objects in JavaScript can be a little 
+more confusing than in Ruby. Also, you have loop through each successive object.
+
+2/3) Were you able to find useful methods to help with this? What concepts
+were solidified in the process of working through this challenge?
+Not necessarily, we mainly worked on solidifying the syntax of iterating 
+over nested objects.
 
 
 
 
-
-
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 
